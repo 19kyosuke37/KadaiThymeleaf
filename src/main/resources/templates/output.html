@@ -2,14 +2,14 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
-    <title>Kadai of Thymeleaf</title>
+    <title th:text="#{content.kadaiTitle}"></title>
 </head>
 <body>
-    <h1 th:text="#{content.kadaiTitle}"></h1>
-    <h2>出力画面</h2>
+    <h1 th:text="#{content.kadaiH1}"></h1>
+    <h2 th:text="#{content.kadaiH2Out}"></h2>
     <p th:text="'入力された値は「' + ${val} +'」です。'"></p>
 
-    <p><a th:href="@{/input(previous=${val})}">入力画面に戻る</a></p>
+    <p><a th:href="@{/input(previous=${val})}" th:text="#{content.kadaiPOut}"></a></p>
         <!--aタグで送った場合はGETで受け取る    -->
 
 </body>
